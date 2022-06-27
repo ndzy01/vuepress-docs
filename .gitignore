@@ -1,0 +1,7 @@
+yarn-error.log
+yarn.lock
+node_modules
+.vuepress/.cache
+.vuepress/.temp
+.vuepress/dist
+test

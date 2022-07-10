@@ -1,7 +1,28 @@
-import { defineUserConfig } from "vuepress";
+import { defineUserConfig, defaultTheme } from "vuepress";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "你好， VuePress ！",
-  description: "这是我的第一个 VuePress 站点",
+  title: "docs",
+  description: "文档",
+  head: [],
+  theme: defaultTheme({
+    logo: "",
+    sidebar: {
+      "/": [
+        {
+          text: "首页",
+          children: ["/README.md"],
+        },
+        { text: "test", children: ["/test/a.md"] },
+      ],
+    },
+  }),
+  plugins: [
+    docsearchPlugin({
+      apiKey: "",
+      appId: "",
+      indexName: "",
+    }),
+  ],
 });

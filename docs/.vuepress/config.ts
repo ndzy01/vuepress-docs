@@ -15,7 +15,7 @@ export default defineUserConfig({
           text: "首页",
           children: ["/README.md"],
         },
-        { text: "test", children: ["/test/a.md"] },
+        { text: "测试", link: "/test/a" },
       ],
     },
   }),

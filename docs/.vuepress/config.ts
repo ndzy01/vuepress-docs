@@ -1,5 +1,5 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import pluginFullTextSearch from "vuepress2-plugin-full-text-search";
 
 export default defineUserConfig({
   base: "/",
@@ -19,11 +19,6 @@ export default defineUserConfig({
       ],
     },
   }),
-  plugins: [
-    docsearchPlugin({
-      apiKey: "",
-      appId: "",
-      indexName: "",
-    }),
-  ],
+  // @ts-ignore
+  plugins: [[pluginFullTextSearch]],
 });

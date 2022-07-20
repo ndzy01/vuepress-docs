@@ -1,5 +1,6 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import pluginFullTextSearch from 'vuepress2-plugin-full-text-search';
+import { fun } from './readFiles';
 
 export default defineUserConfig({
   base: '/',
@@ -9,6 +10,7 @@ export default defineUserConfig({
   head: [],
   theme: defaultTheme({
     logo: '',
+    navbar: fun().nav,
     sidebar: {
       '/': [
         {

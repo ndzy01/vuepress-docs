@@ -1,3 +1,34 @@
+.table-of-contents {
+  top: 100px;
+  right: 8px;
+  position: fixed;
+}
+
 .toggle-color-mode-button {
+  display: none;
+}
+
+.page .theme-default-content {
+  margin: 16px;
+  max-width: 80%;
+}
+
+.page-meta {
+  margin: 16px;
+}
+
+.navbar .navbar-items-wrapper .search-box {
+  padding-left: 16px;
+}
+
+.suggestion {
+  max-width: 500px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
   display: none;
 }

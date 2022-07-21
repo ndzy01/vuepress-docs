@@ -7,19 +7,18 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'docs',
   description: '文档',
-  head: [],
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/favicon.png',
+      },
+    ],
+  ],
   theme: defaultTheme({
-    logo: '',
+    logo: '/favicon.png',
     navbar: fun().nav,
-    sidebar: {
-      '/': [
-        {
-          text: '首页',
-          children: ['/README.md'],
-        },
-        { text: '测试', link: '/abc/a' },
-      ],
-    },
   }),
   // @ts-ignore
   plugins: [[pluginFullTextSearch]],

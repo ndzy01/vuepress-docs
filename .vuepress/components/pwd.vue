@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue';
 
 const val = ref('');
-watch(val, (a, b) => {
+watch(val, (a) => {
   window.localStorage.setItem('flag', a);
 });
 </script>

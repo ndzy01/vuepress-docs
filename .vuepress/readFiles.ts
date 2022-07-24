@@ -54,5 +54,5 @@ export const fun = () => {
     return f;
   });
 
-  return { nav };
+  return { nav: nav.reverse() };
 };

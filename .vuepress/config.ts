@@ -19,6 +19,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: '/favicon.png',
     navbar: fun().nav,
+    sidebar: fun().nav,
   }),
   // @ts-ignore
   plugins: [[pluginFullTextSearch]],

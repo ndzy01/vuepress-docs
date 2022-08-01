@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const docsRoot = path.join(__dirname, '../docs');
+const ignoreDirList = ['code'];
 const readFileList = (
   dir = docsRoot,
   filesList: { name: string; path: string }[] = [],
@@ -14,12 +15,7 @@ const readFileList = (
     const filePath = path.join(dir, item);
     const stat = fs.statSync(filePath);
 
-    if (
-      stat.isDirectory() &&
-      item !== '.vitepress' &&
-      item !== 'public' &&
-      item !== 'imgs'
-    ) {
+    if (stat.isDirectory() && !ignoreDirList.includes(item)) {
       readFileList(path.join(dir, item), filesList, dirList, item);
       dirList.push(item);
     } else {

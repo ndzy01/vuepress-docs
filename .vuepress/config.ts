@@ -1,5 +1,6 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import pluginFullTextSearch from 'vuepress2-plugin-full-text-search';
+import NdzyPlugin from './plugin/plugin-ndzy/node/index';
 import { fun } from './readFiles';
 
 export default defineUserConfig({
@@ -22,5 +23,5 @@ export default defineUserConfig({
     sidebar: fun().nav,
   }),
   // @ts-ignore
-  plugins: [[pluginFullTextSearch]],
+  plugins: [[pluginFullTextSearch], [NdzyPlugin]],
 });
